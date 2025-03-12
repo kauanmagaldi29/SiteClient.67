@@ -68,16 +68,31 @@
             <h2 data-aos="fade-up">Associação Lageana de Mesatenistas de Santa Catarina</h2>
             <p data-aos="fade-up" data-aos-delay="100">Coloque seu número de telefone abaixo e marque uma aula conosco.
               Iremos entrar em contato o mais rápido possível.</p>
-
-            <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
-              data-aos-delay="200">
-              <input type="text" class="form-control" placeholder="( 49 ) 9 9922 - 1133">
+            <form
+              action="https://api.whatsapp.com/send?phone=554799048417&text=Ol%C3%A1,%20tenho%20interesse%20em%20aulas%20de%20t%C3%AAnis%20de%20mesa."
+              class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
+              <input type="text" class="form-control" name="phone_number" id="phone" placeholder="( 49 ) 9 0011 - 1122"
+                maxlength="17" required>
               <button type="submit" class="btn btn-primary">Entrar em contato</button>
             </form>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                var phoneInput = document.getElementById("phone");
+                phoneInput.addEventListener("input", function () {
+                  var value = phoneInput.value.replace(/\D/g, "");
+                  value = value.replace(/(\d{2})(\d)/, "($1) $2");
+                  value = value.replace(/(\d{5})(\d)/, "$1 - $2");
+                  phoneInput.value = value.substring(0, 18);
+                });
+              });
+            </script>
+
           </div>
 
           <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <img src="assets/img/ALMESC LOGO VETOR CMYK-07.png" class="img-fluid mb-3 mb-lg-0" alt="">
+            <img href="https://typebot.co/template-whatsapp-gixm61d" type="submit"
+              src="assets/img/ALMESC LOGO VETOR CMYK-07.png" class="img-fluid mb-3 mb-lg-0" alt="">
           </div>
 
         </div>
@@ -138,7 +153,7 @@
           <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up"
             data-aos-delay="200">
             <img src="assets/img/ALMESC LOGO VETOR CMYK-05.png" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+            <a href="#" class="glightbox pulsating-play-btn"></a>
           </div>
 
           <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
